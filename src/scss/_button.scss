@@ -1,0 +1,16 @@
+a.btn{
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  color: #7CEF94;
+  width: 162px;
+  height: 44px;
+  line-height: 39px;
+  border: 1px solid #7CEF94;
+  border-radius: 100px;
+  transition: .3s;
+  &:hover{
+    background: #7CEF94;
+    color: #000;
+  }
+}

@@ -1,0 +1,20 @@
+.footer{
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 50;
+  padding: 16px;
+  //backdrop-filter: blur(80px);
+  border-radius: 29px;
+  display: flex;
+  justify-content: space-around;
+  //background: #F0F0F0;
+  background: rgba(224, 224, 224, 0.7);
+  backdrop-filter: blur(1px);
+  transition: .3s;
+  a{
+    display: flex;
+    margin: 0 13.5px;
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% set site_name = 'Blacklight | Агентство креативных коммуникаций' %}
+    <title>{{ site_name }} {% if page_name %} - {% endif %} {{ page_name }}</title>
+    <meta name="description" content="">
+
+    {% set version = '?v=' ~ random() %}
+    <link rel="stylesheet" href="css/assets.css{% if version %}{{ version }}{% endif %}">
+    <link rel="stylesheet" href="css/style.css{% if version %}{{ version }}{% endif %}">
+
+    <!-- Primary Meta Tags -->
+    <title>Blacklight — Агентство креативных коммуникаций</title>
+    <meta name="title" content="Blacklight — Агентство креативных коммуникаций">
+    <meta name="description" content="Мы делаем проекты, о которых клиенты узнают из СМИ, а не со страниц отчетов.">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="img/favicon/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="img/favicon/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="img/favicon/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" href="img/favicon/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="img/favicon/favicon-144.png">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://blacklight.ru">
+    <meta property="og:title" content="Blacklight — Агентство креативных коммуникаций">
+    <meta property="og:description" content="Мы делаем проекты, о которых клиенты узнают из СМИ, а не со страниц отчетов.">
+    <meta property="og:image" content=“http://5.188.81.14/img/favicon/bl-og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://blacklight.ru">
+    <meta property="twitter:title" content="Blacklight — Агентство креативных коммуникаций">
+    <meta property="twitter:description" content="Мы делаем проекты, о которых клиенты узнают из СМИ, а не со страниц отчетов.">
+    <meta property="twitter:image" content="http://5.188.81.14/img/favicon/bl-og-image.png">
+
+    <script src="/js/redirect.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+{#    <script src="https://unpkg.com/vue-pdf-embed"></script>#}
+
+</head>
+    <body>
+
+        {% include '../common/header/header.twig' %}
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include '../common/footer/footer.twig' %}
+
+        {% include '../common/modal/modal.twig' %}
+
+{#        {% include '../debug/debug.twig' %}#}
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+
+        <script src="js/assets.js{% if version %}{{ version }}{% endif %}"></script>
+        <script src="js/front.js{% if version %}{{ version }}{% endif %}"></script>
+
+        <script src="js/main.js{% if version %}{{ version }}{% endif %}"></script>
+
+    </body>
+</html>
+

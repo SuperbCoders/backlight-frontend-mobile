@@ -1,0 +1,22 @@
+{% extends "../layout/base_layout.twig" %}
+
+{% set page_name = '' %}
+
+{% block content %}
+
+   <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+         <!-- Slides -->
+         <div class="swiper-slide">
+            {% include '../blocks/desktop/desktop.twig' %}
+         </div>
+         <div class="swiper-slide">
+            {% include '../blocks/promo/promo.twig' %}
+         </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+   </div>
+
+{% endblock %}

@@ -1,0 +1,4 @@
+node_modules
+.gulp/tinypng
+.git
+.idea

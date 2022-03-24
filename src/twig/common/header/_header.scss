@@ -1,0 +1,14 @@
+.header{
+  height: 44px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 17px 18px;
+  z-index: 50;
+  svg{
+    path{
+      transition: .3s;
+    }
+  }
+}

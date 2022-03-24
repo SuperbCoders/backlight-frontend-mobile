@@ -1,0 +1,4 @@
+# Project
+
+- `npm i`  
+- `gulp`

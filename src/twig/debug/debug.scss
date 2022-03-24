@@ -1,0 +1,74 @@
+.responsive-marker{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #fff;
+  z-index: 500;
+  display: none;
+  pointer-events: none;
+  border-radius: 50%;
+  @include media-breakpoint-down(lg) {
+    display: block;
+  }
+  &__item{
+    &--lg{
+      display: none;
+      @include media-breakpoint-down(lg) {
+        display: block;
+      }
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+    &--md{
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+    &--sm{
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+    &--xs{
+      display: none;
+      @include media-breakpoint-down(xs) {
+        display: block;
+      }
+    }
+  }
+}
+
+.resolution-marker{
+  padding: 0 15px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  bottom: 10px;
+  right: 45px;
+  font-size: 14px;
+  color: #fff;
+  z-index: 500;
+  pointer-events: none;
+  border-radius: 15px;
+  display: none;
+  @include media-breakpoint-down(lg) {
+    display: block;
+  }
+}
