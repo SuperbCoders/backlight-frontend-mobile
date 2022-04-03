@@ -1,3 +1,4 @@
+const server = `${window.location.protocol}//${window.location.host}`
 new Vue({
     el: '#cases',
     data() {
@@ -7,7 +8,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://5.188.81.14/api/cases/?format=json')
+            .get(`${server}/api/cases/?format=json`)
             .then(response => (this.info = response.data))
     },
 });
@@ -22,7 +23,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://5.188.81.14/api/rewards/?format=json')
+            .get(`${server}/api/rewards/?format=json`)
             .then(response => (this.info = response.data))
     },
     methods: {
@@ -41,7 +42,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://5.188.81.14/api/rewards/?format=json')
+            .get(`${server}/api/rewards/?format=json`)
             .then(response => (this.info = response.data))
     },
     methods: {
@@ -61,7 +62,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://5.188.81.14/api/text/main_about/?format=json')
+            .get(`${server}/api/text/main_about/?format=json`)
             .then(response => (this.info = response.data))
     }
 });
@@ -76,7 +77,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://5.188.81.14/api/file/presentation/?format=json')
+            .get(`${server}/api/file/presentation/?format=json`)
             .then(response => {
                 this.info = response.data
                 this.info.file_mobile += '#toolbar=0'
@@ -93,7 +94,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://5.188.81.14/api/employees/?format=json')
+            .get(`${server}/api/employees/?format=json`)
             .then(response => (this.info = response.data.filter(item => item.status == true)))
     },
     methods: {
@@ -119,7 +120,7 @@ new Vue({
     mounted() {
         axios
             // .get('test.json')
-            .get('http://5.188.81.14/api/employees/?format=json')
+            .get(`${server}/api/employees/?format=json`)
             .then(response => (this.info = response.data))
     },
     methods: {
@@ -139,7 +140,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://5.188.81.14/api/contacts/?format=json')
+            .get(`${server}/api/contacts/?format=json`)
             .then(response => (this.info = response.data))
     },
 });
@@ -153,7 +154,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://5.188.81.14/api/contacts/?format=json')
+            .get(`${server}/api/contacts/?format=json`)
             .then(response => {this.info = response.data;})
     },
 });
