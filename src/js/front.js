@@ -149,12 +149,30 @@ new Vue({
     el: '#modal-contacts',
     data() {
         return {
-            info: {}
+            contacts: {},
+            socials: []
         };
     },
     mounted() {
         axios
             .get(`${server}/api/contacts/?format=json`)
-            .then(response => {this.info = response.data;})
+            .then(response => {this.contacts = response.data})
+        axios
+            .get(`${server}/api/urls/?format=json`)
+            .then((response) => (this.socials = response.data));
+    },
+});
+
+new Vue({
+    el: '#footer',
+    data() {
+        return {
+            socials: []
+        };
+    },
+    mounted() {
+        axios
+            .get(`${server}/api/urls/?format=json`)
+            .then((response) => (this.socials = response.data));
     },
 });
