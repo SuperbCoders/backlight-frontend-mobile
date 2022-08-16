@@ -9,7 +9,10 @@ new Vue({
     mounted() {
         axios
             .get(`${server}/api/cases/?format=json`)
-            .then(response => (this.info = response.data))
+            .then(response => {
+                this.info = response.data
+                this.info = this.info.map((elem) => elem.pdf.replace('http', 'https'))
+            })
     },
 });
 
