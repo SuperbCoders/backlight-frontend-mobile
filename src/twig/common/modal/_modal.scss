@@ -114,6 +114,10 @@
       justify-content: space-between;
       padding: 8px 16px;
       border-bottom: 0.5px solid #C6C6C8;
+      align-items: center;
+      &-subitem{
+        padding-left: 32px;
+      }
       &-main{
         margin-right: auto;
         &-title{
@@ -157,7 +161,6 @@
         svg{
           margin-left: 12px;
           position: relative;
-          top: 7px;
         }
       }
       //&:nth-of-type(n+10){

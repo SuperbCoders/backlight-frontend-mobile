@@ -8,8 +8,8 @@
 	<title>Blacklight | Агентство креативных коммуникаций </title>
 	<meta name="description" content="">
 
-	<link rel="stylesheet" href="css/assets.css?v=1221955834">
-	<link rel="stylesheet" href="css/style.css?v=1221955834">
+	<link rel="stylesheet" href="css/assets.css?v=33977205">
+	<link rel="stylesheet" href="css/style.css?v=33977205">
 
 	<!-- Primary Meta Tags -->
 	<title>Blacklight — Агентство креативных коммуникаций</title>
@@ -83,7 +83,6 @@
 	</div>
 	<!-- /.header -->
 	<main>
-
 
 		<div class="swiper">
 			<!-- Additional required wrapper -->
@@ -210,14 +209,17 @@
 							</div>
 							<!-- /.promo-title -->
 							<div class="promo-description">
-								Работаем в&nbsp;паре &laquo;агентство + клиент&raquo;,
-								потому что в&nbsp;коллаборации получается лучший результат.<br>
-								Мы&nbsp;не&nbsp;придумываем креатив ради креатива
-								и&nbsp;всегда несем ответственность за&nbsp;свои идеи. Это наша суперсила.
+								Работаем в паре «агентство + клиент»,
+								потому что в коллаборации получается лучший результат.<br />
+								Мы не придумываем креатив ради креатива и всегда
+								несем ответственность за свои идеи.
+								Это наша суперсила.<br /><br />
+
+								Если вы клиент и хотите с нами работать:
 							</div>
 							<!-- /.promo-description -->
 							<div class="promo-action">
-								<a class="btn" href="https://booking.appointy.com/Blacklight2022" target="_blank">
+								<a class="btn" href="mailto:dolzhenko@blacklight.ru" target="_blank">
 									назначить встречу
 								</a>
 							</div>
@@ -436,7 +438,7 @@
 				<!-- /.folder-content-title -->
 				<div class="folder-content-list" id="cases">
 
-					<a v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'" target="_blank" class="folder-content-list-item" v-for="(item, index) in info">
+					<a v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'" v-on:pointerdown="event.peventDefault()" target="_blank" class="folder-content-list-item" v-for="(item, index) in info">
 						<div class="folder-content-list-item-main">
 							<div class="folder-content-list-item-main-title">
 								{{ item.client }}
@@ -814,10 +816,10 @@
 		window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
 	</script>
 
-	<script src="js/assets.js?v=1221955834"></script>
-	<script src="js/front.js?v=1221955834"></script>
+	<script src="js/assets.js?v=33977205"></script>
+	<script src="js/front.js?v=33977205"></script>
 
-	<script src="js/main.js?v=1221955834"></script>
+	<script src="js/main.js?v=33977205"></script>
 
 </body>
 
