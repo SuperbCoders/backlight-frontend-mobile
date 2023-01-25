@@ -8,8 +8,8 @@
 	<title>Blacklight | Агентство креативных коммуникаций </title>
 	<meta name="description" content="">
 
-	<link rel="stylesheet" href="css/assets.css?v=1705941528">
-	<link rel="stylesheet" href="css/style.css?v=1705941528">
+	<link rel="stylesheet" href="css/assets.css?v=425609342">
+	<link rel="stylesheet" href="css/style.css?v=425609342">
 
 	<!-- Primary Meta Tags -->
 	<title>Blacklight — Агентство креативных коммуникаций</title>
@@ -219,8 +219,8 @@
 							</div>
 							<!-- /.promo-description -->
 							<div class="promo-action">
-								<a class="btn" href="mailto:info@blacklight.ru" target="_blank">
-									назначить встречу
+								<a class="btn" href="mailto:dolzhenko@blacklight.ru" target="_blank">
+									Отправить запрос
 								</a>
 							</div>
 							<!-- /.promo-action -->
@@ -431,51 +431,38 @@
 		</div>
 		<!-- /.window-header -->
 		<div class="window-content">
-			<div class="folder-content" id="cases">
+			<div class="folder-content">
 				<div class="folder-content-title">
 					КЕЙСЫ
 				</div>
 				<!-- /.folder-content-title -->
-        <div class="folder-content-list">
-          <div v-for="(year) in computedYears">
-            <div class="folder-content-list-item" @click="toggleActiveYear(year)">
-              <div class="folder-content-list-item-main">
-                <div class="folder-content-list-item-main-title">
-                  {{ year.value }}
-                </div>
-              </div>
-              <div class="folder-content-list-item-year">
+				<div class="folder-content-list" id="cases">
 
-                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 7.5C9 7.29248 8.91699 7.10156 8.75928 6.95215L2.18506 0.510742C2.03564 0.369629 1.85303 0.294922 1.63721 0.294922C1.21387 0.294922 0.881836 0.618652 0.881836 1.05029C0.881836 1.25781 0.964844 1.44873 1.09766 1.58984L7.14062 7.5L1.09766 13.4102C0.964844 13.5513 0.881836 13.7339 0.881836 13.9497C0.881836 14.3813 1.21387 14.7051 1.63721 14.7051C1.85303 14.7051 2.03564 14.6304 2.18506 14.481L8.75928 8.04785C8.91699 7.89014 9 7.70752 9 7.5Z" fill="#3C3C43" fill-opacity="0.3" />
-                </svg>
-              </div>
-            </div>
-            <div class="folder-content-list" v-show="activeYear === year">
-              <a v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'" v-on:pointerdown="event.peventDefault()" target="_blank" class="folder-content-list-item folder-content-list-item-subitem" v-for="item in year.items">
-                <div class="folder-content-list-item-main">
-                  <div class="folder-content-list-item-main-title">
-                    {{ item.client }}
-                  </div>
-                  <!-- /.folder-content-list-item-main-title -->
-                  <div class="folder-content-list-item-main-description">
-                    {{ item.name }}
-                  </div>
-                  <!-- /.folder-content-list-item-main-description -->
-                </div>
-                <!-- /.folder-content-list-item-main -->
-                <div class="folder-content-list-item-year">
+					<a v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'" v-on:pointerdown="event.peventDefault()" target="_blank" class="folder-content-list-item" v-for="(item, index) in info">
+						<div class="folder-content-list-item-main">
+							<div class="folder-content-list-item-main-title">
+								{{ item.client }}
+							</div>
+							<!-- /.folder-content-list-item-main-title -->
+							<div class="folder-content-list-item-main-description">
+								{{ item.name }}
+							</div>
+							<!-- /.folder-content-list-item-main-description -->
+						</div>
+						<!-- /.folder-content-list-item-main -->
+						<div class="folder-content-list-item-year">
+							<span>
+								{{ item.date_at.substr(0, 4) }}
+							</span>
+							<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M9 7.5C9 7.29248 8.91699 7.10156 8.75928 6.95215L2.18506 0.510742C2.03564 0.369629 1.85303 0.294922 1.63721 0.294922C1.21387 0.294922 0.881836 0.618652 0.881836 1.05029C0.881836 1.25781 0.964844 1.44873 1.09766 1.58984L7.14062 7.5L1.09766 13.4102C0.964844 13.5513 0.881836 13.7339 0.881836 13.9497C0.881836 14.3813 1.21387 14.7051 1.63721 14.7051C1.85303 14.7051 2.03564 14.6304 2.18506 14.481L8.75928 8.04785C8.91699 7.89014 9 7.70752 9 7.5Z" fill="#3C3C43" fill-opacity="0.3" />
+							</svg>
+						</div>
+						<!-- /.folder-content-list-item-year -->
+					</a>
+					<!-- /.folder-content-list-item -->
 
-                  <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 7.5C9 7.29248 8.91699 7.10156 8.75928 6.95215L2.18506 0.510742C2.03564 0.369629 1.85303 0.294922 1.63721 0.294922C1.21387 0.294922 0.881836 0.618652 0.881836 1.05029C0.881836 1.25781 0.964844 1.44873 1.09766 1.58984L7.14062 7.5L1.09766 13.4102C0.964844 13.5513 0.881836 13.7339 0.881836 13.9497C0.881836 14.3813 1.21387 14.7051 1.63721 14.7051C1.85303 14.7051 2.03564 14.6304 2.18506 14.481L8.75928 8.04785C8.91699 7.89014 9 7.70752 9 7.5Z" fill="#3C3C43" fill-opacity="0.3" />
-                  </svg>
-                </div>
-                <!-- /.folder-content-list-item-year -->
-              </a>
-
-            </div>
-          </div>
-        </div>
+				</div>
 				<!-- /.folder-content-list -->
 			</div>
 			<!-- /.folder-content -->
@@ -829,10 +816,10 @@
 		window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
 	</script>
 
-	<script src="js/assets.js?v=1705941528"></script>
-	<script src="js/front.js?v=1705941528"></script>
+	<script src="js/assets.js?v=425609342"></script>
+	<script src="js/front.js?v=425609342"></script>
 
-	<script src="js/main.js?v=1705941528"></script>
+	<script src="js/main.js?v=425609342"></script>
 
 </body>
 
