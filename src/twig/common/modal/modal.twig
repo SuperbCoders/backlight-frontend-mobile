@@ -307,7 +307,7 @@
                 <div class="folder-content-list-item"  v-for="(item, index) in info" {% verbatim %} v-on:click="openMore(index)" {% endverbatim %}>
                     <div class="folder-content-list-item-main">
                         <div class="folder-content-list-item-main-title">
-                            {% verbatim %}{{ item.festival }}{% endverbatim %}
+                            {% verbatim %}{{ item.festival }} / {{ item.type }}{% endverbatim %}
                         </div>
                         <!-- /.folder-content-list-item-main-title -->
                         <div class="folder-content-list-item-main-description">
