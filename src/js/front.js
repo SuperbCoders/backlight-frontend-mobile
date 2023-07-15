@@ -244,9 +244,15 @@ new Vue({
     };
   },
   mounted () {
+
     axios
       .get(`${ server }/api/rewards/?format=json`)
-      .then(response => (this.info = response.data))
+      .then(response => {
+        this.info = response.data.sortBy((a,b) => {
+          return b.year - a.year;
+        })
+      })
+
   },
   methods: {
     openMore: function (index) {
