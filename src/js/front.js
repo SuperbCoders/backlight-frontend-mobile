@@ -248,7 +248,7 @@ new Vue({
     axios
       .get(`${ server }/api/rewards/?format=json`)
       .then(response => {
-        this.info = response.data.sortBy((a,b) => {
+        this.info = response.data.sort((a,b) => {
           return b.year - a.year;
         })
       })
