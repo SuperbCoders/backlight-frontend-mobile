@@ -8,8 +8,8 @@
 	<title>Blacklight | Агентство креативных коммуникаций </title>
 	<meta name="description" content="">
 
-	<link rel="stylesheet" href="css/assets.css?v=1814584843">
-	<link rel="stylesheet" href="css/style.css?v=1814584843">
+	<link rel="stylesheet" href="css/assets.css?v=6923112">
+	<link rel="stylesheet" href="css/style.css?v=6923112">
 
 	<!-- Primary Meta Tags -->
 	<title>Blacklight — Агентство креативных коммуникаций</title>
@@ -417,7 +417,7 @@
 				<!-- /.folder-content-title -->
 				<div class="folder-content-list" id="cases">
 
-					<a v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'" v-on:pointerdown="event.peventDefault()" target="_blank" class="folder-content-list-item" v-for="(item, index) in info">
+					<a v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'" v-on:pointerdown="event.preventDefault()" target="_blank" class="folder-content-list-item" v-for="(item, index) in items">
 						<div class="folder-content-list-item-main">
 							<div class="folder-content-list-item-main-title">
 								{{ item.client }}
@@ -795,10 +795,10 @@
 		window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
 	</script>
 
-	<script src="js/assets.js?v=1814584843"></script>
-	<script src="js/front.js?v=1814584843"></script>
+	<script src="js/assets.js?v=6923112"></script>
+	<script src="js/front.js?v=6923112"></script>
 
-	<script src="js/main.js?v=1814584843"></script>
+	<script src="js/main.js?v=6923112"></script>
 
 </body>
 

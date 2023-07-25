@@ -49,7 +49,6 @@ new Vue({
       this.activeYear = year;
     },
     loadItems (year) {
-      // fancy();
       axios.get(`${server}/api/cases/${year}/?format=json`).then((response) => {
         this.cases = response.data;
       });

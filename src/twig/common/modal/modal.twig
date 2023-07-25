@@ -139,7 +139,7 @@
             <!-- /.folder-content-title -->
             <div class="folder-content-list" id="cases">
 
-                <a {% verbatim %} v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'"{% endverbatim %} v-on:pointerdown="event.peventDefault()" target="_blank" class="folder-content-list-item" {% verbatim %} v-for="(item, index) in info" {% endverbatim %}>
+                <a {% verbatim %} v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'"{% endverbatim %} v-on:pointerdown="event.preventDefault()" target="_blank" class="folder-content-list-item" {% verbatim %} v-for="(item, index) in items" {% endverbatim %}>
                     <div class="folder-content-list-item-main">
                         <div class="folder-content-list-item-main-title">
                             {% verbatim %}{{ item.client }}{% endverbatim %}
