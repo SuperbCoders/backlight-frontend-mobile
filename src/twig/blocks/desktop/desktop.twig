@@ -17,7 +17,8 @@
                     <!-- /.folder -->
                 </div>
                 <!-- /.desktop-grid-item -->
-                <div class="desktop-grid-item">
+                <div class="desktop-grid-item desktop-grid-item_cases">
+                    <div id="casesFolderAnimation"></div>
                     <div class="folder folder-cases">
                         <div class="folder-ico">
                             <img src="/src/img/design/icons/folder.png" srcset="/src/img/design/icons/folder@2x.png 2x" alt="img">
@@ -101,5 +102,22 @@
         <!-- /.note -->
     </div>
     <!-- /.container-fluid -->
+    <script  src="js/animation/lottie.js"></script>
+    <script>
+        // Get a reference to the container element
+        var container = document.getElementById("casesFolderAnimation");
+
+        // Set the path to your animation JSON file
+        var animationPath = "/img/design/icons/cases_animation.json";
+        console.log('test');
+        // Load the animation using Lottie
+        var anim = bodymovin.loadAnimation({
+            container: container,
+            renderer: "svg", // You can also use "canvas" or "html"
+            loop: true, // Set to true for looping
+            autoplay: true, // Set to true to automatically start the animation
+            path: animationPath,
+        });
+    </script>
 </div>
 <!-- /.desktop -->
