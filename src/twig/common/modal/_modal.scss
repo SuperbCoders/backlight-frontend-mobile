@@ -291,6 +291,8 @@
     &-photo{
       position: relative;
       z-index: 1;
+      height: 188px;
+      background-color: #ccc;
       &:before{
         content: '';
         position: absolute;
@@ -305,6 +307,7 @@
       img{
         width: 100%;
         position: relative;
+        height: 188px;
         z-index: 1;
       }
     }

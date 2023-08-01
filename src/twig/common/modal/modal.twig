@@ -213,7 +213,7 @@
             <div class="team-item"  v-for="(item, index) in info">
                 <div class="team-card" {% verbatim %} v-on:click="openMore(index)" {% endverbatim %}>
                     <div class="team-card-photo">
-                        {% verbatim %}<img :src="item.photo" alt="img" loading="lazy">{% endverbatim %}
+                        {% verbatim %}<img :data-src="item.photo" alt="img" loading="lazy">{% endverbatim %}
                     </div>
                     <!-- /.team-card-photo -->
                     <div class="team-card-info">

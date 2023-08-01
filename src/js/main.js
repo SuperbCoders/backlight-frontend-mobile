@@ -23,6 +23,9 @@ $(document).ready(function() {
     })
     $('.folder-team').on('click', function (){
         $('.window-team').addClass('active');
+        $('.team-card-photo img').each(function(element) {
+            if(!$(this).attr('src')) $(this).attr('src', $(this).data('src'));
+        })
     })
     $('.folder-vacancies').on('click', function (){
         $('.window-vacancies').addClass('active');
