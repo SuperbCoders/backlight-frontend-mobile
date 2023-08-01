@@ -27,6 +27,12 @@
         position: relative;
       }
     }
+    &--bottom {
+      position: absolute;
+      bottom: 180px;
+      left: 20px;
+      right: 20px;
+    }
   }
 }
 

@@ -67,179 +67,7 @@ new Vue({
   el: '#awards',
   data () {
     return {
-      info: [
-        {
-          "id": 8,
-          "year": 2019,
-          "type": "Пиар",
-          "work_title": "в номинации \"Лучшая вирусная кампания\"",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": "Бронза"
-        },
-        {
-          "id": 5,
-          "year": 2018,
-          "type": "SMM",
-          "work_title": "в номинации Social Media",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": null
-        },
-        {
-          "id": 2,
-          "year": 2018,
-          "type": "SMM",
-          "work_title": "в номинации «Лучшее Social Media финансовой компании»",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": null
-        },
-        {
-          "id": 3,
-          "year": 2018,
-          "type": "брендинг",
-          "work_title": "в номинации «Лучший интерактивный брендинг»",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": null
-        },
-        {
-          "id": 4,
-          "year": 2018,
-          "type": "SMM",
-          "work_title": "в номинации «Лучшая страница/ группа»",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": null
-        },
-        {
-          "id": 20,
-          "year": 2021,
-          "type": "Инфлюенс-маркетинг",
-          "work_title": "в номинации \"Бизнес-вызовы/Local marketing\"",
-          "festival": "EFFIE",
-          "image": null,
-          "category": "Серебро"
-        },
-        {
-          "id": 19,
-          "year": 2021,
-          "type": "Креатив",
-          "work_title": "в номинации \"Медиа/Медиаинновация и медиаидея\"",
-          "festival": "EFFIE",
-          "image": null,
-          "category": "Серебро"
-        },
-        {
-          "id": 18,
-          "year": 2021,
-          "type": "Стратегия",
-          "work_title": "в номинации \"Электронная коммерция\"",
-          "festival": "Silver Mercury",
-          "image": null,
-          "category": "Серебро"
-        },
-        {
-          "id": 17,
-          "year": 2021,
-          "type": "брендинг",
-          "work_title": "в номинации \"Лучшая кампания построения лояльности бренду\"",
-          "festival": "Silver Mercury",
-          "image": null,
-          "category": "Серебро"
-        },
-        {
-          "id": 16,
-          "year": 2020,
-          "type": "брендинг",
-          "work_title": "в номинации \"Лучший некоммерческий проект\"",
-          "festival": "Tagline Summer Awards 2020",
-          "image": null,
-          "category": "Золото"
-        },
-        {
-          "id": 15,
-          "year": 2021,
-          "type": "Пиар",
-          "work_title": "в номинации \"Лучшая кампания для медиа/СМИ\"",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": "Золото"
-        },
-        {
-          "id": 14,
-          "year": 2021,
-          "type": "Стратегия",
-          "work_title": "в номинации \"Лучшее использование digital/mobile инструментов\"",
-          "festival": "Silver Mercury",
-          "image": null,
-          "category": "Золото"
-        },
-        {
-          "id": 13,
-          "year": 2020,
-          "type": "брендинг",
-          "work_title": "в номинации \"Лучший некоммерческий проект\"",
-          "festival": "Tagline Summer Awards 2020",
-          "image": null,
-          "category": "Бронза"
-        },
-        {
-          "id": 12,
-          "year": 2020,
-          "type": "Инфлюенс-маркетинг",
-          "work_title": "в номинации \"Лучшее использование лидеров мнений\"",
-          "festival": "Silver Mercury",
-          "image": null,
-          "category": "Бронза"
-        },
-        {
-          "id": 11,
-          "year": 2020,
-          "type": "Видео",
-          "work_title": "в номинации \"Комедийный ролик\"",
-          "festival": "Big Picture festival",
-          "image": null,
-          "category": "Бронза"
-        },
-        {
-          "id": 10,
-          "year": 2019,
-          "type": "SMM",
-          "work_title": "в номинации \"Social Media\"",
-          "festival": "MIXX Russia Awards",
-          "image": null,
-          "category": "Серебро"
-        },
-        {
-          "id": 9,
-          "year": 2019,
-          "type": "Пиар",
-          "work_title": "в номинации \"Лучшая вирусная кампания\"",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": "Серебро"
-        },
-        {
-          "id": 7,
-          "year": 2019,
-          "type": "Видео",
-          "work_title": "в номинации \"Лучший видеопроект\"",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": "Бронза"
-        },
-        {
-          "id": 6,
-          "year": 2019,
-          "type": "Пиар",
-          "work_title": "в номинации \"Лучшая кампания для финансовой/страховой организации\"",
-          "festival": "TAGLINE",
-          "image": null,
-          "category": "Бронза"
-        }
-      ]
+      info: []
     };
   },
   mounted () {
@@ -255,6 +83,7 @@ new Vue({
   },
   methods: {
     openMore: function (index) {
+      console.log(index);
       $('.awards-full-item .window').eq(index).addClass('active');
     },
   }
@@ -270,7 +99,11 @@ new Vue({
   mounted () {
     axios
       .get(`${ server }/api/rewards/?format=json`)
-      .then(response => (this.info = response.data))
+      .then(response => {
+        this.info = response.data.sort((a,b) => {
+          return b.year - a.year;
+        })
+      })
   },
   methods: {
     closeMore: function () {
@@ -292,6 +125,25 @@ new Vue({
       .then(response => (this.info = response.data))
   }
 });
+
+new Vue({
+  el: "#vacancies",
+  data() {
+    return {
+      vacancies: [],
+      vacancy: {}
+    };
+  },
+  methods: {
+  },
+  created() {
+    axios.get(`${server}/api/jobs/?format=json`).then((response) => {
+      this.vacancies = response.data;
+      this.isLoading = false;
+    });
+  },
+});
+
 
 new Vue({
   el: '#presentation',

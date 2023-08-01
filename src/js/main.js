@@ -24,6 +24,9 @@ $(document).ready(function() {
     $('.folder-team').on('click', function (){
         $('.window-team').addClass('active');
     })
+    $('.folder-vacancies').on('click', function (){
+        $('.window-vacancies').addClass('active');
+    })
 });
 
 $(document).ready(function() {
