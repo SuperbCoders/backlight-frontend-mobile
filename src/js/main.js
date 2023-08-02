@@ -15,6 +15,13 @@ swiper.on('slideChange', function () {
 
 
 $(document).ready(function() {
+    const appHeight = () => {
+        const doc = document.documentElement
+        doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    }
+    window.addEventListener('resize', appHeight)
+    appHeight()
+
     $('.folder-cases').on('click', function (){
         $('.window-cases').addClass('active');
     })

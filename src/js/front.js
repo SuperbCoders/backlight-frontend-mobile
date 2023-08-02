@@ -139,7 +139,6 @@ new Vue({
   created() {
     axios.get(`${server}/api/jobs/?format=json`).then((response) => {
       this.vacancies = response.data;
-      this.isLoading = false;
     });
   },
 });

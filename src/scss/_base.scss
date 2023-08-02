@@ -1,8 +1,16 @@
+:root {
+  --app-height: 100%;
+}
+
 html, body {
   height: 100vh;
+
+  @media not all and (hover:hover) {
+    height: var(--app-height);
+  }
+
   overflow: hidden;
   font-family: 'TT Hoves', sans-serif;
-  //font-family: 'Atyp Display', sans-serif;
   width: 100%;
   max-width: 1024px;
   margin: auto;
@@ -32,7 +40,7 @@ html, body {
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets{
-  bottom: 136px;
+  bottom: 116px;
 }
 
 .dark{
