@@ -363,28 +363,29 @@
             </div>
             <!-- /.folder-content-title -->
             <div class="folder-content-list" id="vacancies">
-                <a {% verbatim %} v-bind:href="item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0'"{% endverbatim %} v-on:pointerdown="event.preventDefault()" target="_blank" class="folder-content-list-item" {% verbatim %} v-for="(item, index) in vacancies" {% endverbatim %}>
-                    <div class="folder-content-list-item-main">
-                        <div class="folder-content-list-item-main-title">
-                            {% verbatim %}{{ item.title }}{% endverbatim %}
-                            /
-                            {% verbatim %}{{ item.salary ? `${item.salary.toLocaleString('en')} ₽` : ''}} {% endverbatim %}
+                <div {% verbatim %} v-for="(item, index) in vacancies" {% endverbatim %}>
+                    <a {% verbatim %} :data-type="item.pdf_mobile ? 'pdf' : 'text'" :href="item.pdf_mobile ? item.pdf_mobile + '#toolbar=0&navpanes=0&scrollbar=0' : 'javascript:void(0);'" :target="item.pdf_mobile ? '_blank' : null" {% endverbatim %} v-on:pointerdown="event.preventDefault()"  class="folder-content-list-item" >
+                        <div class="folder-content-list-item-main">
+                            <div class="folder-content-list-item-main-title">
+                                {% verbatim %}{{ item.title }}{% endverbatim %}
+                                {% verbatim %}{{ item.salary ? `/ ${item.salary.toLocaleString('en')} ₽` : ''}} {% endverbatim %}
+                            </div>
+                            <!-- /.folder-content-list-item-main-title -->
+                            <div class="folder-content-list-item-main-description">
+                                {{ item.description }}
+                            </div>
+                            <!-- /.folder-content-list-item-main-description -->
                         </div>
-                        <!-- /.folder-content-list-item-main-title -->
-                        <div class="folder-content-list-item-main-description">
-                            {{ item.description }}
+                        <div class="folder-content-list-item-year">
+                            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 7.5C9 7.29248 8.91699 7.10156 8.75928 6.95215L2.18506 0.510742C2.03564 0.369629 1.85303 0.294922 1.63721 0.294922C1.21387 0.294922 0.881836 0.618652 0.881836 1.05029C0.881836 1.25781 0.964844 1.44873 1.09766 1.58984L7.14062 7.5L1.09766 13.4102C0.964844 13.5513 0.881836 13.7339 0.881836 13.9497C0.881836 14.3813 1.21387 14.7051 1.63721 14.7051C1.85303 14.7051 2.03564 14.6304 2.18506 14.481L8.75928 8.04785C8.91699 7.89014 9 7.70752 9 7.5Z" fill="#3C3C43" fill-opacity="0.3"/>
+                            </svg>
                         </div>
-                        <!-- /.folder-content-list-item-main-description -->
-                    </div>
-                    <div class="folder-content-list-item-year">
-                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 7.5C9 7.29248 8.91699 7.10156 8.75928 6.95215L2.18506 0.510742C2.03564 0.369629 1.85303 0.294922 1.63721 0.294922C1.21387 0.294922 0.881836 0.618652 0.881836 1.05029C0.881836 1.25781 0.964844 1.44873 1.09766 1.58984L7.14062 7.5L1.09766 13.4102C0.964844 13.5513 0.881836 13.7339 0.881836 13.9497C0.881836 14.3813 1.21387 14.7051 1.63721 14.7051C1.85303 14.7051 2.03564 14.6304 2.18506 14.481L8.75928 8.04785C8.91699 7.89014 9 7.70752 9 7.5Z" fill="#3C3C43" fill-opacity="0.3"/>
-                        </svg>
-                    </div>
-                    <!-- /.folder-content-list-item-year -->
-                </a>
-                <!-- /.folder-content-list-item -->
-
+                    </a>
+                    <p class="folder-content-list-item__description" {% verbatim %} v-if="!item.pdf_mobile" {% endverbatim %}>
+                        {% verbatim %} {{item.description}} {% endverbatim %}
+                    </p>
+                </div>
             </div>
             <!-- /.folder-content-list -->
         </div>

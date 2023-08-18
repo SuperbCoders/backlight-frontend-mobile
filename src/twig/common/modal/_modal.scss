@@ -442,3 +442,15 @@
     padding: 0 10%;
   }
 }
+
+.folder-content-list-item__description {
+  white-space: pre-wrap;
+  display: none;
+  padding: 15px;
+}
+#vacancies .folder-content-list-item .folder-content-list-item-year svg {
+  transform-origin: center;
+}
+#vacancies .folder-content-list-item.open .folder-content-list-item-year svg {
+  transform: rotate(90deg);
+}

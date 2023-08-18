@@ -44,13 +44,15 @@ $(document).ready(function() {
         $('.window-contact').addClass('active');
         return false;
     })
-});
-
-$(document).ready(function() {
     $('.window-header-back').on('click', function (){
         $('.window').removeClass('active');
     })
 });
+
+$('body').on('click', '#vacancies .folder-content-list-item[data-type=text]', function() {
+    $(this).toggleClass('open');
+    $(this).next('.folder-content-list-item__description').slideToggle();
+})
 
 
 
