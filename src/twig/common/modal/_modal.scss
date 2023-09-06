@@ -454,3 +454,11 @@
 #vacancies .folder-content-list-item.open .folder-content-list-item-year svg {
   transform: rotate(90deg);
 }
+
+#vacancies .folder-content-list-item-main-description  {
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+#vacancies .folder-content-list-item-year {
+  min-width: 24px;
+}

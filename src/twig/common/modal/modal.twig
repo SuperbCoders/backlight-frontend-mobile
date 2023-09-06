@@ -371,8 +371,8 @@
                                 {% verbatim %}{{ item.salary ? `/ ${item.salary.toLocaleString('en')} ₽` : ''}} {% endverbatim %}
                             </div>
                             <!-- /.folder-content-list-item-main-title -->
-                            <div class="folder-content-list-item-main-description">
-                                {{ item.description }}
+                            <div {% verbatim %} v-html="item.description" {% endverbatim %} class="folder-content-list-item-main-description vacancy-item-description">
+                        
                             </div>
                             <!-- /.folder-content-list-item-main-description -->
                         </div>
